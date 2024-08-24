@@ -14,57 +14,50 @@
 
 struct NDArrayShape:
     """
-    Encapsulates the shape information of an n-dimensional array (NDArray).
+    Encapsulates the shape information of an $n$-dimensional array (`NDArray`).
 
-    This struct manages the dimensional properties of an NDArray, providing
+    This struct manages the dimensional properties of an `NDArray`, providing
     methods for initialization, access, and representation of the array's shape.
-
-    Attributes:
-        shape (List[Int]): Stores the size of each dimension of the NDArray.
-        ndim (Int): Represents the number of dimensions in the NDArray.
-        size (Int): Stores the total number of elements in the NDArray.
-
-    Example:
-        var shape3d = NDArrayShape(3, 4, 5)
-        print(shape3d)  # Output: (3, 4, 5)
-        print(shape3d.ndim)  # Output: 3
-        print(shape3d.size)  # Output: 60
     """
 
     var shape: List[Int]
     """
-    List storing the size of each dimension of the NDArray.
+    List storing the size of each dimension of the `NDArray`.
     
-    For a 3x4x5 array, shape would be [3, 4, 5].
+    For a 3x4x5 array, `shape` would be `[3, 4, 5]`.
     """
 
     var ndim: Int
     """
-    Total number of dimensions in the NDArray.
+    Total number of dimensions in the `NDArray`.
     
-    For a 3x4x5 array, ndim would be 3.
+    For a 3x4x5 array, `ndim` would be 3.
     """
 
     var size: Int
     """
-    Total number of elements in the NDArray.
+    Total number of elements in the `NDArray`.
     
-    Calculated as the product of all dimension sizes.
-    For a 3x4x5 array, size would be 3 * 4 * 5 = 60.
+    Calculated as the product of all dimension sizes. For a 3x4x5 array, `size`
+    would be 3 * 4 * 5 = 60.
     """
 
     fn __init__(inout self, *shape: Int):
         """
         Initialize a new NDArrayShape instance.
 
+        This constructor initializes the shape, calculates the number of dimensions
+        (`ndim`), and computes the total number of elements (`size`).
+
         Args:
             *shape: Variable number of integers representing the size of each dimension.
 
-        This constructor initializes the shape, calculates the number of dimensions (ndim),
-        and computes the total number of elements (size).
-
         Example:
-            var shape = NDArrayShape(3, 4, 5)  # Creates a 3D shape of 3x4x5
+            ```mojo
+            from tensorra import NDArrayShape
+
+            var shape = NDArrayShape(3, 4, 5)
+            ```
         """
         self.size = 1
         self.ndim = len(shape)
@@ -83,11 +76,12 @@ struct NDArrayShape:
         Returns:
             The size of the dimension at the given index.
 
-        This method allows indexing into the shape to get the size of a specific dimension.
-
         Example:
+            ```mojo
+            from tensorra import NDArrayShape
             var shape = NDArrayShape(3, 4, 5)
             print(shape[1])  # Output: 4
+            ```
         """
         return self.shape[index]
 
@@ -95,14 +89,17 @@ struct NDArrayShape:
         """
         Get the number of dimensions.
 
+        This method allows using the `len()` function on the NDArrayShape object.
+
         Returns:
             The number of dimensions (ndim).
 
-        This method allows using the len() function on the NDArrayShape object.
-
         Example:
+            ```mojo
+            from tensorra import NDArrayShape
             var shape = NDArrayShape(3, 4, 5)
             print(len(shape))  # Output: 3
+            ```
         """
         return self.ndim
 
@@ -111,13 +108,15 @@ struct NDArrayShape:
         Get a string representation of the shape.
 
         Returns:
-            A string in the format "(dim1, dim2, ..., dimN)".
-
-        This method provides a human-readable representation of the shape.
+            A string in the format `"(dim1, dim2, ..., dimN)"`.
 
         Example:
+            ```mojo
+            from tensorra import NDArrayShape
+
             var shape = NDArrayShape(3, 4, 5)
             print(shape)  # Output: (3, 4, 5)
+            ```
         """
         var result: String = "("
         for i in range(self.ndim):
