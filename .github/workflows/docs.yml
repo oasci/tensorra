@@ -36,7 +36,7 @@ jobs:
       - name: Install magic
         run: |
           curl -ssL https://modul.ar/magic-alpha | bash
-          export PATH="$PATH:/home/runner/.modular/bin"
+          echo "$HOME/.modular/bin" >> $GITHUB_PATH
 
       - name: Install dependencies
         run: magic install -e docs
