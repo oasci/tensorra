@@ -34,7 +34,9 @@ jobs:
           fetch-depth: 0
 
       - name: Install magic
-        run: curl -ssL https://modul.ar/magic-alpha | bash
+        run: |
+          curl -ssL https://modul.ar/magic-alpha | bash
+          source ~/.bash_profile
 
       - name: Install dependencies
         run: magic install -e docs
