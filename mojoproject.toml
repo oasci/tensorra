@@ -10,7 +10,7 @@ platforms = ["linux-64"]
 docs = { cmd = "mkdocs build -d public/" }
 serve = { cmd = "mkdocs serve" }
 build = { cmd = "mojo package src/ -o build/tensorra.mojopkg " }
-test = { cmd = "mojo test -I src tests" }
+tests = { cmd = "mojo test -I src tests" }
 
 [dependencies]
 max = ">=24.4.0dev7,<24.5"
