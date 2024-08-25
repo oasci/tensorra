@@ -2,9 +2,13 @@
 
 TODO: write introduction about welcome to contribute
 
+!!! danger
+    magic does not support nightly, yet.
+    We currently recommend following the [MAX nightly installation instructions](https://docs.modular.com/max/install) and use those globally installed binaries.
+
 ## MAX & Mojo
 
-We will be using `magic` to manage our package dependencies, including installing [MAX](https://www.modular.com/max) and [mojo](https://www.modular.com/mojo).
+We will be using [`magic`](https://modul.ar/magic) to manage our package dependencies, including installing [MAX](https://www.modular.com/max) and [mojo](https://www.modular.com/mojo).
 First, you can install `magic` with the following command.
 
 ```sh
