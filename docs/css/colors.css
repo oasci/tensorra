@@ -1,8 +1,8 @@
 [data-md-color-scheme="default"] {
 
     /* Primary color shades */
-    --md-primary-fg-color:               #f3722c;
-    --md-primary-fg-color--light:        #fcbf49;
+    --md-primary-fg-color:               #874580;
+    --md-primary-fg-color--light:        #B36BAC;
     --md-primary-bg-color:               #ffffff; /* Header text */
     --md-primary-bg-color--light:        #DBDBDB; /* Secondary header text */
 
@@ -41,7 +41,7 @@
     --md-typeset-color:                  #212529; /* Main text color */
 
     /* Typeset `a` color shades */
-    --md-typeset-a-color:                #01a0d7; /* Link color */
+    --md-typeset-a-color:                #BA78B3; /* Link color */
 
     /* Typeset `table` color shades */
     --md-typeset-table-color:            #a5a5a5;  /* Outline color */
@@ -55,7 +55,7 @@
     --md-footer-bg-color--dark:          #212529; /* Footer background */
 
     /* Accent color shades */
-    --md-accent-fg-color:                #032779; /* Hover over link */
+    --md-accent-fg-color:                #72195A; /* Hover over link */
     --md-accent-fg-color--transparent:   #caf0f8; /* Hover over transparent (e.g., code with link) */
     --md-accent-bg-color:                #ffffff;
     --md-accent-bg-color--light:         #e5e5e5;
@@ -68,8 +68,8 @@
 [data-md-color-scheme="dark"] {
 
     /* Primary color shades */
-    --md-primary-fg-color:               #cc5803;
-    --md-primary-fg-color--light:        #0437AD;
+    --md-primary-fg-color:               #874580;
+    --md-primary-fg-color--light:        #B36BAC;
     --md-primary-bg-color:               #ffffff; /* Header text */
     --md-primary-bg-color--light:        #DBDBDB; /* Secondary header text */
 
@@ -108,7 +108,7 @@
     --md-typeset-color:                  #ffffff; /* Main text color */
 
     /* Typeset `a` color shades */
-    --md-typeset-a-color:                #01a0d7; /* Link color */
+    --md-typeset-a-color:                #CEA1CA; /* Link color */
 
     /* Typeset `table` color shades */
     --md-typeset-table-color:            #a5a5a5;  /* Outline color */
@@ -122,7 +122,7 @@
     --md-footer-bg-color--dark:          #171717; /* Footer background */
 
     /* Accent color shades */
-    --md-accent-fg-color:                #90e0ef; /* Hover over link */
+    --md-accent-fg-color:                #A72584; /* Hover over link */
     --md-accent-fg-color--transparent:   #6D6D6D; /* Hover over transparent (e.g., code with link) */
     --md-accent-bg-color:                #ffffff;
     --md-accent-bg-color--light:         #e5e5e5;
