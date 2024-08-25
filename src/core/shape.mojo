@@ -63,7 +63,7 @@ struct NDArrayShape:
         self.ndim = len(shape)
         self.shape = List[Int]()
         for i in range(self.ndim):
-            self.shape[i] = shape[i]
+            self.shape.append(shape[i])
             self.size *= shape[i]
 
     fn __getitem__(self, index: Int) -> Int:
@@ -115,13 +115,13 @@ struct NDArrayShape:
             from tensorra import NDArrayShape
 
             var shape = NDArrayShape(3, 4, 5)
-            print(shape)  # Output: (3, 4, 5)
+            print(shape.__str__())  # Output: (3, 4, 5)
             ```
         """
         var result: String = "("
         for i in range(self.ndim):
             if i > 0:
                 result += ", "
-            result += str(self[i])
+            result += str(self.shape[i])
         result += ")"
         return result
