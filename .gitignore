@@ -5,3 +5,5 @@
 .magic
 # documentation
 public
+# mojo
+*.mojopkg
